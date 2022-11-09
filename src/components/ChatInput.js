@@ -10,16 +10,19 @@ export default function ChatInput({ sendChat }) {
   };
 
   return (
-    <div className='container input-group fixed-bottom p-2'>
-      <input type="text" className="form-control" placeholder="Masukkan pesan..." aria-label="Username" value={value} onChange={valueChange} />
-
-      {
-        value.trim().length === 0 ? (
-          <button className="btn btn-primary" type="button" disabled><BiSend /></button>
-        ) : (
-          <button className="btn btn-primary" type="button" onClick={send}><BiSend /></button>
-        )
-      }
+    <div className='row g-0 sticky-bottom pt-2 pb-3'>
+      <div className='col-10'>
+        <input type="text" className="form-control input-size rounded-0 rounded-start" placeholder="Masukkan pesan..." aria-label="Username" value={value} onChange={valueChange} />
+      </div>
+      <div className='col-2'>
+        {
+          value.trim().length === 0 ? (
+            <button className="btn w-100 input-size btn-primary rounded-0 rounded-end" type="button" disabled><h3><BiSend /></h3></button>
+          ) : (
+            <button className="btn w-100 input-size btn-primary rounded-0 rounded-end" type="button" onClick={send}><h3><BiSend /></h3></button>
+          )
+        }
+      </div>
 
     </div>
   );

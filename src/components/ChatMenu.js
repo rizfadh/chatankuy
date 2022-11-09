@@ -42,7 +42,6 @@ export default function ChatMenu() {
   return (
     <section className='container h-100'>
       <ChatList chats={chats} />
-      <div className='p-4'></div>
       <ChatInput sendChat={sendChat} />
     </section>
   );

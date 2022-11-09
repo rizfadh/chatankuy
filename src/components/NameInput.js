@@ -14,9 +14,13 @@ export default function NameInput() {
   };
 
   return (
-    <div className='input-group'>
-      <input type="text" className="form-control" placeholder="Masukkan nama kamu" aria-label="Username" value={name} onChange={nameChange} />
-      <button className="btn btn-primary" type="button" onClick={login}><FiLogIn /></button>
+    <div className='row g-0'>
+      <div className="col-10">
+        <input type="text" className="form-control input-size rounded-0 rounded-start" placeholder="Masukkan nama kamu" aria-label="Username" value={name} onChange={nameChange} />
+      </div>
+      <div className="col-2">
+        <button className="btn w-100 input-size btn-primary rounded-0 rounded-end" type="button" onClick={login}><h3><FiLogIn /></h3></button>
+      </div>
     </div>
   );
 }
