@@ -8,7 +8,6 @@ import UserContext from '../context/UserContext';
 export default function ChatMenu() {
   const [chats, setChats] = React.useState([]);
   const [loading, setLoading] = React.useState(true);
-  const [newChat, setNewChat] = React.useState('');
   const { name } = React.useContext(UserContext);
 
   React.useEffect(() => {
@@ -29,10 +28,8 @@ export default function ChatMenu() {
     window.scrollTo({ top: document.documentElement.scrollHeight });
   }, [chats]);
 
-  const newChatChange = (e) => setNewChat(e.target.value);
-  const sendChat = async () => {
-    await addChat(name, newChat);
-    setNewChat('');
+  const sendChat = async (chat) => {
+    await addChat(name, chat);
   }
 
   if (loading) return (
@@ -46,7 +43,7 @@ export default function ChatMenu() {
     <section className='container h-100'>
       <ChatList chats={chats} />
       <div className='p-4'></div>
-      <ChatInput newChat={newChat} newChatChange={newChatChange} sendChat={sendChat} />
+      <ChatInput sendChat={sendChat} />
     </section>
   );
 }
