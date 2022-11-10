@@ -8,7 +8,6 @@ import Landing from './components/Landing';
 import UserContext from './context/UserContext';
 import ChatMenu from './components/ChatMenu';
 
-
 export default function App() {
   const [name, setName] = React.useState('');
 

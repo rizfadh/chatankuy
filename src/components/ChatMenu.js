@@ -11,17 +11,13 @@ export default function ChatMenu() {
   const { name } = React.useContext(UserContext);
 
   React.useEffect(() => {
-    const unsubChat = onSnapshot(makeQuery, (snapshot) => {
+    onSnapshot(makeQuery, (snapshot) => {
       const chats = snapshot.docs.map((doc) => {
         return { id: doc.id, ...doc.data() };
       });
       setChats(chats);
       setLoading(false);
     });
-
-    return () => {
-      unsubChat();
-    };
   }, []);
 
   React.useEffect(() => {

@@ -12,14 +12,14 @@ html {
   }
 }
 
-.text-justify {
-  text-align: justify;
-}
-
 .input-size {
   height: 50px;
 }
 
 .w-90 {
   width: 90% !important;
+}
+
+.pb-6 {
+  padding-bottom: ($spacer * 4.2) !important;
 }
