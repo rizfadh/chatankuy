@@ -15,7 +15,7 @@ export default function NameInput() {
 
   return (
     <form onSubmit={login}>
-      <div className='row g-0'>
+      <div className='row g-0 shadow-sm'>
         <div className='col-10'>
           <input type='text' className='form-control input-size rounded-0 rounded-start' placeholder='Masukkan nama kamu' aria-label='Username' value={name} onChange={nameChange} />
         </div>

@@ -13,15 +13,15 @@ export default function ChatItem({ id, name, chat, createdAt }) {
   };
 
   return (
-    <div className="card bg-light">
+    <div className="card bg-light border-0 shadow-sm">
       <div className="row g-0">
         <div className="col-10 d-flex align-items-center">
           <div className="card-body py-2">
             <div className='d-flex justify-content-between'>
-              <p className="card-title fw-bold mb-0">{name}</p>
+              <p className="card-title fw-bold text-break mb-0">{name}</p>
               <small className="text-muted">{`${time}`}</small>
             </div>
-            <p className="card-text mb-0">{chat}</p>
+            <p className="card-text text-break mb-0">{chat}</p>
           </div>
         </div>
         <div className="col-2">

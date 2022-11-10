@@ -13,8 +13,8 @@ export default function ChatInput({ sendChat }) {
   };
 
   return (
-    <form onSubmit={send} className='container fixed-bottom pb-2'>
-      <div className='row g-0'>
+    <form onSubmit={send} className='container fixed-bottom pb-3'>
+      <div className='row g-0 shadow-sm'>
         <div className='col-10'>
           <input type='text' className='form-control input-size rounded-0 rounded-start' placeholder='Masukkan pesan...' aria-label='Username' value={value} onChange={valueChange} />
         </div>

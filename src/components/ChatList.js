@@ -6,7 +6,7 @@ export default function ChatList({ chats }) {
 
   if (chats.length === 0) return (
     <div className='h-100 d-flex flex-column justify-content-center text-center'>
-      <h1 className="text-muted">
+      <h1 className="text-muted mb-0">
         Chat kosong
       </h1>
       <p className='text-muted'>
@@ -30,7 +30,7 @@ export default function ChatList({ chats }) {
           return (
             <React.Fragment key={obj}>
               <div className='d-flex justify-content-center'>
-                <p className='d-inline-block text-white my-3 py-2 px-3 bg-primary rounded'>
+                <p className='d-inline-block my-3 py-2 px-3 bg-light shadow-sm rounded'>
                   {obj}
                 </p>
               </div>

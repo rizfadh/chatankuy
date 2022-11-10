@@ -30,15 +30,18 @@ export default function ChatMenu() {
 
   if (loading) return (
     <section className='container h-100 d-flex flex-column justify-content-center text-center'>
-      <h1 className='text-primary'>Memuat Chat</h1>
+      <h1 className='text-primary mb-0'>Memuat Chat</h1>
       <p>Mohon tunggu sebentar</p>
     </section>
   );
 
   return (
-    <section className='container h-100'>
-      <ChatList chats={chats} />
-      <ChatInput sendChat={sendChat} />
-    </section>
+    <>
+      <div className='bg position-fixed w-100 h-100'></div>
+      <section className='container h-100'>
+        <ChatList chats={chats} />
+        <ChatInput sendChat={sendChat} />
+      </section>
+    </>
   );
 }

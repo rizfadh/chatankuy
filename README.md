@@ -1,2 +1,2 @@
 # ChatanKuy  
-Aplikasi react sederhana untuk chatingan menggunakan firebase
+Aplikasi chatingan dibuat menggunakan library react dan firebase
